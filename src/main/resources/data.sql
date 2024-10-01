@@ -1,0 +1,1 @@
+insert into member(name,account,password) values('ruan','ruan00','00ruan');

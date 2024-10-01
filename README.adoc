@@ -1,0 +1,10 @@
+== what is postman?
+
+* API test tool
+* 幫助開發者去簡化測試流程
+* 可以透過發送http請求來測試api的功能 -> 看回傳的資料是否正確
+
+== what is cURL?
+* API test tool
+* 基於網路協定，對指定的URL進行網路傳輸，但不處理傳輸的資料
+* cURL加上不同參數指令 -> 不同傳輸請求
