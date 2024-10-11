@@ -29,7 +29,10 @@ public class CusFilter extends OncePerRequestFilter{
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, 
                                     FilterChain filterChain)
             throws ServletException, IOException {
-
+    	
+    	//設定編碼
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         String requestURI = request.getRequestURI();
         
         //不建立新的session
