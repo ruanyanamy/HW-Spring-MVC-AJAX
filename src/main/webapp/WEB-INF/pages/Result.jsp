@@ -1,4 +1,4 @@
-<%@page import="com.systex.PlayLottery.model.Member"%>
+<%@page import="com.systex.playlottery.model.Member"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -49,7 +49,7 @@
                 </table>
 
                 <div class="text-center mt-3">
-                    <a href="index.jsp" class="btn btn-primary">Go Home</a>
+                    <a href="/playlottery/lottery" class="btn btn-primary">重新產生樂透號碼</a>
                 </div>
 
             </div>

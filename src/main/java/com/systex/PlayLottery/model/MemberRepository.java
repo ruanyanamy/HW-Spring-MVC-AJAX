@@ -1,4 +1,4 @@
-package com.systex.PlayLottery.model;
+package com.systex.playlottery.model;
 
 import java.util.Optional;
 

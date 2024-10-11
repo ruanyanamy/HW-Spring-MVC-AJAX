@@ -15,7 +15,7 @@
             <div class="col-md-6">
                 <h2 class="text-center my-4">| Signin |</h2>
                 
-                <form:form action="/PlayLottery/signin" method="post">
+                <form:form action="/playlottery/signin" method="post">
                     <div class="mb-3">
                         <form:label path="account" class="form-label">帳號</form:label>
                         <form:input path="account" class="form-control"/>
@@ -32,8 +32,12 @@
                 </form:form>
                 
                 <div class="text-center mt-3">
-                    <a href="/PlayLottery/signup" class="btn btn-primary"
+                    <a href="/playlottery/signup" class="btn btn-primary"
                     style="background-color: #ADADAD; color: white;">還沒有帳號嗎?註冊一個</a>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="/playlottery/ajaxsignin" class="btn btn-primary"
+                    style="background-color: #ADADAD; color: white;">AJAX登入</a>
                 </div>
             </div>
         </div>

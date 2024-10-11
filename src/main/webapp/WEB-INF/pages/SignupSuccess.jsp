@@ -16,7 +16,7 @@
                 <h2 class="text-center my-4">註冊成功</h2>
                 <div class="text-center">
                     <p>您已成功註冊！</p>
-                    <a href="/PlayLottery/signin" class="btn btn-primary">登入</a>
+                    <a href="/playlottery/signin" class="btn btn-primary">登入</a>
                 </div>
             </div>
         </div>

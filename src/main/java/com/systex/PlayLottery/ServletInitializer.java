@@ -1,4 +1,4 @@
-package com.systex.PlayLottery;
+package com.systex.playlottery;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

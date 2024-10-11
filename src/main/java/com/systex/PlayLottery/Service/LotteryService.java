@@ -1,4 +1,4 @@
-package com.systex.PlayLottery.Service;
+package com.systex.playlottery.service;
 
 import org.springframework.stereotype.Service;
 

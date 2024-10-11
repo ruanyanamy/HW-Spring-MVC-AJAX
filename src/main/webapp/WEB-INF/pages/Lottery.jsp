@@ -1,5 +1,5 @@
 <%@page import="java.util.LinkedList"%>
-<%@page import="com.systex.PlayLottery.model.Member"%>
+<%@page import="com.systex.playlottery.model.Member"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -20,7 +20,7 @@
                 <% Member member = (Member) session.getAttribute("member"); %>
                 <h3 class="text-center">很高興為 <%= member.getName()%> 服務</h3>
 
-                <form action="/PlayLottery/validandgenlotterynum" method="post">
+                <form action="/playlottery/validandgenlotterynum" method="post">
                     <div class="mb-3">
                         <label for="group" class="form-label">您想要生成的組數</label>
                         <input type="text" id="group" name="group" class="form-control" placeholder="請輸入組數">
@@ -37,7 +37,7 @@
                 </form>
 
                 <div class="text-center mt-3">
-				    <a href="index.jsp" class="btn btn-primary">Go Home</a>
+				    <a href="/playlottery/signout" class="btn btn-primary">登出</a>
 				</div>
 
                 <% LinkedList<String> errors = (LinkedList<String>) request.getAttribute("error"); %>

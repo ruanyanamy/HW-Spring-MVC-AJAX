@@ -9,13 +9,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h2 class="text-danger text-center my-4">錯誤</h2>
-        <div class="text-center">
-            <p>${errormsg}</p> 
-            <a href="/PlayLottery/signup" class="btn btn-primary">返回註冊頁</a>
-            <a href="/PlayLottery/signin" class="btn btn-primary">返回登入頁</a>
-        </div>
-    </div>
+   <div style="text-align: center;">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-danger" style="font-size: 1.5rem; font-weight: bold;">錯誤訊息</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach var="ErrorMsgs" items="${ErrorMsgs}">
+                <tr>
+                    <td>${ErrorMsgs}</td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
+    <a href="/playlottery/signup" class="btn btn-primary">返回註冊頁</a>
+    <a href="/playlottery/signin" class="btn btn-primary">返回登入頁</a>
+    <a href="/playlottery/lottery" class="btn btn-primary">樂透重新輸入</a>
+</div>
+</div>
 </body>
 </html>

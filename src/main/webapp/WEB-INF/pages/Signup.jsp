@@ -15,7 +15,7 @@
             <div class="col-md-6">
                 <h2 class="text-center my-4">| Signup |</h2>
                 
-                <form:form modelAttribute="signup" action="/PlayLottery/signup" method="post">
+                <form:form modelAttribute="signup" action="/playlottery/signup" method="post">
                     <div class="mb-3">
                         <form:label path="name" class="form-label">姓名</form:label>
                         <form:input path="name" class="form-control"/>
@@ -37,8 +37,8 @@
                 </form:form>
                 
                 <div class="text-center mt-3">
-                    <a href="/PlayLottery/signin" class="btn btn-primary"
-                    style="background-color: #ADADAD; color: white;">登入</a>
+                    <a href="/playlottery/signin" class="btn btn-primary"
+                    style="background-color: #ADADAD; color: white;">登入頁面</a>
                 </div>
 
             </div>
