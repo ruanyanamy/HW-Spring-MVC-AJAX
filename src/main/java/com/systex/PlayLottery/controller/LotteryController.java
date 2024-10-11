@@ -56,10 +56,12 @@ public class LotteryController {
                     for (String e2 : e) {
                         try {
                             int num = Integer.parseInt(e2);
-                            if (num > 0) {
+                            if (num > 0 & num < 49) {
                                 excludes.add(num);
+                            } else if (num > 49){
+                                ErrorMsgs.add("請輸入小於49的數字");
                             } else {
-                                ErrorMsgs.add("請輸入大於0的數字");
+                            	ErrorMsgs.add("請輸入大於0的數字");
                             }
                         } catch (NumberFormatException ex) {
                             ErrorMsgs.add("請輸入不想包含的【數字】");

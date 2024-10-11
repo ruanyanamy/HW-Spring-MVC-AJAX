@@ -19,11 +19,11 @@ public class LotteryService {
 		ArrayList<Integer> picknumgroup = new ArrayList<>();
 		int num;
 		
-		for (int i=0;i<groups;i++) {
+		for (int i=0;i<groups*6;i++) {
 			while(temp.size()<6) {
 				num = (int)(Math.random()*(49-excludes.size()))+1;    //pick random num
-				if (!excludes.contains(num)) {                        //不包含一樣的號碼
-					temp.add(num);
+				if (!excludes.contains(num)) {                        //不包含不要選的號碼
+					temp.add(num);                                    //不包含一樣的號碼
 				}
 			}
 			for (int pn : temp) {

@@ -8,16 +8,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>註冊成功</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f4f4f9; 
+            font-family: 'Arial', sans-serif;
+            height: 100vh; 
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        h2 {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px; 
+        }
+        .btn-primary {
+            background-color: #5a67d8;
+            border: none;
+            border-radius: 25px; 
+            padding: 0.75rem 1.25rem; 
+        }
+        .btn-primary:hover {
+            background-color: #4c51bf;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px; 
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h2 class="text-center my-4">註冊成功</h2>
-                <div class="text-center">
-                    <p>您已成功註冊！</p>
-                    <a href="/playlottery/signin" class="btn btn-primary">登入</a>
-                </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>註冊成功</h2>
+                <p>您已成功註冊！</p>
+                <a href="/playlottery/signin" class="btn btn-primary">登入</a>
             </div>
         </div>
     </div>

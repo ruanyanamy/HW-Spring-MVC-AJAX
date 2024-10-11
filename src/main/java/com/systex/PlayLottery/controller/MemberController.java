@@ -69,13 +69,6 @@ public class MemberController {
 		return "redirect:/lottery";
 	}
 	
-//    @PostMapping("/ajaxsignin")
-//    @ResponseBody
-//    public ResponseEntity<Map<String, String>> ajaxValidatemember() {
-//    	System.out.println("right2");
-//    	return ResponseEntity.ok(Map.of("status", "success")); 
-//    }
-	
 }
         
 

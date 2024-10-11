@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class GeneralErrorController implements ErrorController {
 	@GetMapping("/error")
 	public String errorreport() {
-		System.out.println("返回error");
 		return "error";
 	}
 }
