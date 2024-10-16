@@ -11,8 +11,13 @@ import com.systex.playlottery.model.MemberRepository;
 
 import jakarta.servlet.http.HttpSession;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 @Service
 public class UserService {
+	
+	//BCryptPasswordEncoder Object,加密強度預設10
+	private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 	
 	@Autowired
 	private MemberRepository memberrepository;
@@ -34,10 +39,11 @@ public class UserService {
 	            return setError(session, "帳號不存在 , 請先註冊");
 	        }
 	        
+	        //使用者存在 , 獲取使用者
 			Member member = result.get();
 				
 			//使用者是否輸入正確帳密
-			if (member.getPassword().equals(password)) {
+			if (encoder.matches(password, member.getPassword())) {
 				session.setAttribute("member", member);
 				return true;
 			}else {
@@ -64,16 +70,22 @@ public class UserService {
 		try {
 			Optional<Member> result = this.memberrepository.findByAccount(account);
 			
+			//如果使用者註冊過
 			if (result.isPresent()) {
 				return setError(session, "帳號已存在 , 請選擇別的帳號名稱");
 			}
 			
-			//沒有註冊過就加入Member
+			//沒有註冊過就加入Member資料
 			Member member = new Member();
 	        member.setAccount(account);
-	        member.setPassword(password);
+	        
+	        //加密password
+	        String ePassword = encryptPassword(password);
+	        
+	        member.setPassword(ePassword);        
 	        member.setName(name);
 			this.memberrepository.save(member);
+			
 			return true;
 			
 		}catch (Exception e) {
@@ -87,6 +99,13 @@ public class UserService {
 		session.setAttribute("ErrorMsgs" , errmsg);
 		return false;
 	}
+	
+	//密碼加密
+	public String encryptPassword(String password) {		
+		//加密過後的密碼
+		return encoder.encode(password);	
+	}
+
     
 
 }
